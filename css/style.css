@@ -1,5 +1,6 @@
 :root {
   --header-height: 50px;
+  --nav-height: 60px;
 }
 
 /* RESET */
@@ -74,7 +75,7 @@ header {
 
 /* WRAPPER */
 .wrapper {
-  height: calc(100vh - var(--header-height));
+  height: calc(100vh - var(--header-height) - var(--nav-height));
   width: 100%;
 
   overflow: hidden;
@@ -111,4 +112,41 @@ main .container {
   /* background-color: blue; */
   padding: 2px 5px;
   backdrop-filter: brightness(0.6) blur(2px);
+}
+
+/* NAV */
+nav {
+  font-size: 0.5rem;
+  height: var(--nav-height);
+  background-color: #222222;
+  display: flex;
+  align-items: center;
+}
+nav p {
+  padding-top: 5px;
+}
+
+nav i {
+  font-size: 1.5rem;
+}
+.nav-left {
+  /* margin: 5px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mute-mic,
+.video-stop {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.up-arrow {
+  display: flex;
+  align-items: center;
+}
+
+.up-arrow > i {
+  font-size: 0.5rem;
 }
