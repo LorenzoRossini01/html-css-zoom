@@ -6,13 +6,30 @@
     <title>Document</title>
 
     <!-- link font awersome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- link css -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <!-- intestazione -->
-    <header></header>
+    <header>
+      <div class="grid-settings grid-view">
+        <div class="lable">
+          <span><i class="fa-solid fa-grip"></i></span>
+          <span>Speaker View</span>
+        </div>
+        <div id="maximize" class="lable">
+          <i class="fa-solid fa-maximize"></i>
+        </div>
+      </div>
+    </header>
 
     <!-- main cams -->
     <main>
@@ -26,7 +43,10 @@
     </main>
     <!-- command bar -->
     <nav>
-      <div class="nav-left"></div>
+      <div class="nav-left">
+        <!-- <i class="fa-solid fa-microphone"></i>
+        <i class="fa-solid fa-microphone-slash"></i> -->
+      </div>
       <div class="nav-center"></div>
       <div class="nav-right"></div>
     </nav>
