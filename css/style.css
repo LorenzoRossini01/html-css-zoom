@@ -1,3 +1,7 @@
+:root {
+  --header-height: 50px;
+}
+
 /* RESET */
 * {
   margin: 0;
@@ -27,7 +31,7 @@ a {
 /* UTILS */
 
 .container {
-  max-width: 1080px;
+  max-width: 1150px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -43,10 +47,14 @@ body {
 }
 
 /* HEADER */
+header {
+  /* position: fixed; */
+}
 .grid-view {
   font-size: 0.7rem;
   text-align: end;
   margin-top: 5px;
+  height: var(--header-height);
 }
 
 .lable {
@@ -62,4 +70,45 @@ body {
 
 #maximize {
   display: inline-block;
+}
+
+/* WRAPPER */
+.wrapper {
+  height: calc(100vh - var(--header-height));
+  width: 100%;
+
+  overflow: hidden;
+}
+
+main .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 3px;
+  row-gap: 7px;
+}
+
+.user-pic {
+  width: calc(100% / 7);
+  background-image: url(https://picsum.photos/500/300);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  aspect-ratio: calc(16 / 9);
+
+  /* debug */
+  /* background-color: #4a4a4a; */
+}
+
+.user-pic img {
+}
+
+.user-lable {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.7rem;
+  /* background-color: blue; */
+  padding: 2px 5px;
+  backdrop-filter: brightness(0.6) blur(2px);
 }
