@@ -1,5 +1,5 @@
 :root {
-  --header-height: 50px;
+  --header-height: 1.4rem;
   --nav-height: 60px;
 }
 
@@ -32,15 +32,15 @@ a {
 /* UTILS */
 
 .container {
-  max-width: 1150px;
+  max-width: 1750px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
 .debug {
-  min-height: 80px;
+  /* min-height: 80px;
   background-color: lightgray;
-  padding: 2rem;
+  padding: 2rem; */
 }
 
 body {
@@ -48,14 +48,13 @@ body {
 }
 
 /* HEADER */
-header {
-  /* position: fixed; */
-}
+
 .grid-view {
   font-size: 0.7rem;
   text-align: end;
-  margin-top: 5px;
   height: var(--header-height);
+  line-height: var(--header-height);
+  vertical-align: middle;
 }
 
 .lable {
@@ -74,45 +73,6 @@ header {
 }
 
 /* WRAPPER */
-.wrapper {
-  height: calc(100vh - var(--header-height) - var(--nav-height));
-  width: 100%;
-
-  overflow: hidden;
-}
-
-main .container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  column-gap: 3px;
-  row-gap: 7px;
-}
-
-.user-pic {
-  width: calc(100% / 7);
-  background-image: url(https://picsum.photos/500/300);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  aspect-ratio: calc(16 / 9);
-
-  /* debug */
-  /* background-color: #4a4a4a; */
-}
-
-.user-pic img {
-}
-
-.user-lable {
-  position: absolute;
-  bottom: 0;
-  font-size: 0.7rem;
-  /* background-color: blue; */
-  padding: 2px 5px;
-  backdrop-filter: brightness(0.6) blur(2px);
-}
 
 /* NAV */
 nav {
@@ -120,20 +80,30 @@ nav {
   height: var(--nav-height);
   background-color: #222222;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  flex-shrink: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
+
 nav p {
   padding-top: 5px;
 }
 
 nav i {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
+
+/* NAV LEFT */
 .nav-left {
   /* margin: 5px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-width: 100px;
 }
 
 .mute-mic,
@@ -149,4 +119,35 @@ nav i {
 
 .up-arrow > i {
   font-size: 0.5rem;
+}
+
+.nav-center {
+  max-width: 1000px;
+  min-width: 500px;
+}
+
+.nav-center ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.fa-share-from-square {
+  color: lime;
+}
+
+.nav-center li div {
+  text-align: center;
+}
+
+.nav-right div {
+  background-color: #4a4a4a;
+  color: red;
+  font-weight: bold;
+
+  min-width: 80px;
+  height: var(--nav-height);
+  padding: 0 1rem;
+  line-height: var(--nav-height);
+  vertical-align: middle;
 }
